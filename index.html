@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+    <!-- https://electronjs.org/docs/tutorial/security#csp-meta-tag -->
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+    <link rel="shortcut icon" href="https://www.iconarchive.com/download/i83449/pelfusion/long-shadow-ios7/Calculator.ico" />
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <p id="Result" class="resultSize resultFont resultMargin resultBackgroundColor resultAlignment defaultPosition resultBorder resultOverflow">0</p>
+    <button id="SignChangeButton" class="defaultSize signChangeFont signChangeButtonMargin defaultAlignment defaultPosition">+/-</button>
+    <button id="DecimalButton" class="defaultSize defaultFont decimalButtonMargin defaultAlignment defaultPosition">,</button>
+    <button id="ZeroButton" class="defaultSize defaultFont zeroButtonMargin defaultAlignment defaultPosition">0</button>
+    <button id="OneButton" class="defaultSize defaultFont oneButtonMargin defaultAlignment defaultPosition">1</button>
+    <button id="TwoButton" class="defaultSize defaultFont twoButtonMargin defaultAlignment defaultPosition">2</button>
+    <button id="ThreeButton" class="defaultSize defaultFont threeButtonMargin defaultAlignment defaultPosition">3</button>
+    <button id="FourButton" class="defaultSize defaultFont fourButtonMargin defaultAlignment defaultPosition">4</button>
+    <button id="FiveButton" class="defaultSize defaultFont fiveButtonMargin defaultAlignment defaultPosition">5</button>
+    <button id="SixButton" class="defaultSize defaultFont sixButtonMargin defaultAlignment defaultPosition">6</button>
+    <button id="SevenButton" class="defaultSize defaultFont sevenButtonMargin defaultAlignment defaultPosition">7</button>
+    <button id="EightButton" class="defaultSize defaultFont eightButtonMargin defaultAlignment defaultPosition">8</button>
+    <button id="NineButton" class="defaultSize defaultFont nineButtonMargin defaultAlignment defaultPosition">9</button>
+    <button id="MinusButton" class="defaultSize defaultFont minusButtonMargin defaultAlignment defaultPosition">-</button>
+    <button id="PlusButton" class="defaultSize defaultFont plusButtonMargin defaultAlignment defaultPosition">+</button>
+    <button id="DivisionButton" class="defaultSize defaultFont divisionButtonMargin defaultAlignment defaultPosition">/</button>
+    <button id="MultiplicationButton" class="defaultSize defaultFont multiplicationButtonMargin defaultAlignment defaultPosition">*</button>
+    <button id="ClearButton" class="defaultSize signChangeFont clearButtonMargin defaultAlignment defaultPosition">CE</button>
+    <button id="ClearAllButton" class="defaultSize signChangeFont clearAllButtonMargin defaultAlignment defaultPosition">C</button>
+    <button id="EqualButton" class="defaultSize defaultFont equalButtonMargin defaultAlignment defaultPosition">=</button>
+    <script src="mainWindow.js"></script>
+    <script src="Element.js"></script>
+    <script src="NumberBuilder.js"></script>
+    <script src="CalculatorModel.js"></script>
+  </body>
+</html>

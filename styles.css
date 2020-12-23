@@ -1,0 +1,132 @@
+.defaultSize {
+    width: 80px;
+    height: 80px;
+}
+
+.resultSize {
+    width: 422px;
+    height: 96px;
+}
+
+.resultBorder {
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+}
+
+.resultOverflow {
+    overflow: hidden;
+}
+
+.defaultPosition {
+    position:absolute;
+}
+
+.defaultFont {
+    font-size:56px;
+}
+
+.signChangeFont {
+    font-size:48px;
+}
+
+.resultFont {
+    font-size:72px;
+}
+
+.defaultAlignment {
+    float: left;
+    text-align: center;
+    vertical-align: center;
+}
+
+.resultAlignment {
+    float: right;
+    text-align: right;
+    vertical-align: center;
+}
+
+.resultBackgroundColor {
+    background-color: #FFDEF1FF;
+}
+
+.resultMargin {
+    margin: 10px 0px 0px 10px;
+}
+
+.signChangeButtonMargin {
+    margin: 493px 0px 0px 12px;
+}
+
+.decimalButtonMargin {
+    margin: 493px 0px 0px 192px;
+}
+
+.zeroButtonMargin {
+    margin: 493px 0px 0px 102px;
+}
+
+.oneButtonMargin {
+    margin: 404px 0px 0px 12px;
+}
+
+.twoButtonMargin {
+    margin: 404px 0px 0px 102px;
+}
+
+.threeButtonMargin {
+    margin: 404px 0px 0px 192px;
+}
+
+.fourButtonMargin {
+    margin: 314px 0px 0px 12px;
+}
+
+.fiveButtonMargin {
+    margin: 314px 0px 0px 102px;
+}
+
+.sixButtonMargin {
+    margin: 314px 0px 0px 192px;
+}
+
+.sevenButtonMargin {
+    margin: 224px 0px 0px 12px;
+}
+
+.eightButtonMargin {
+    margin: 224px 0px 0px 102px;
+}
+
+.nineButtonMargin {
+    margin: 224px 0px 0px 192px;
+}
+
+.minusButtonMargin {
+    margin: 493px 0px 0px 352px;
+}
+
+.plusButtonMargin {
+    margin: 404px 0px 0px 352px;
+}
+
+.divisionButtonMargin {
+    margin: 314px 0px 0px 352px;
+}
+
+.multiplicationButtonMargin {
+    margin: 224px 0px 0px 352px;
+}
+
+.clearButtonMargin {
+    margin: 125px 0px 0px 12px;
+}
+
+.clearAllButtonMargin {
+    margin: 125px 0px 0px 102px;
+}
+
+.equalButtonMargin {
+    margin: 125px 0px 0px 352px;
+}
+
