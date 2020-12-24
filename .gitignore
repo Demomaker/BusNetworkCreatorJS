@@ -475,3 +475,6 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+
+# Access Tokens
+accessToken.js

@@ -4,34 +4,52 @@
     <meta charset="UTF-8">
     <title>Calculator</title>
     <!-- https://electronjs.org/docs/tutorial/security#csp-meta-tag -->
-    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' http://* https://* 'unsafe-inline';" />
     <link rel="shortcut icon" href="https://www.iconarchive.com/download/i83449/pelfusion/long-shadow-ios7/Calculator.ico" />
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+   integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+   crossorigin=""/>
+   <script>window.jQuery = window.$ = require("jquery");</script>
+   <link href="css/bootstrap.min.css" rel="stylesheet">
+   <script src="js/bootstrap.min.js"></script>
   </head>
   <body>
-    <p id="Result" class="resultSize resultFont resultMargin resultBackgroundColor resultAlignment defaultPosition resultBorder resultOverflow">0</p>
-    <button id="SignChangeButton" class="defaultSize signChangeFont signChangeButtonMargin defaultAlignment defaultPosition">+/-</button>
-    <button id="DecimalButton" class="defaultSize defaultFont decimalButtonMargin defaultAlignment defaultPosition">,</button>
-    <button id="ZeroButton" class="defaultSize defaultFont zeroButtonMargin defaultAlignment defaultPosition">0</button>
-    <button id="OneButton" class="defaultSize defaultFont oneButtonMargin defaultAlignment defaultPosition">1</button>
-    <button id="TwoButton" class="defaultSize defaultFont twoButtonMargin defaultAlignment defaultPosition">2</button>
-    <button id="ThreeButton" class="defaultSize defaultFont threeButtonMargin defaultAlignment defaultPosition">3</button>
-    <button id="FourButton" class="defaultSize defaultFont fourButtonMargin defaultAlignment defaultPosition">4</button>
-    <button id="FiveButton" class="defaultSize defaultFont fiveButtonMargin defaultAlignment defaultPosition">5</button>
-    <button id="SixButton" class="defaultSize defaultFont sixButtonMargin defaultAlignment defaultPosition">6</button>
-    <button id="SevenButton" class="defaultSize defaultFont sevenButtonMargin defaultAlignment defaultPosition">7</button>
-    <button id="EightButton" class="defaultSize defaultFont eightButtonMargin defaultAlignment defaultPosition">8</button>
-    <button id="NineButton" class="defaultSize defaultFont nineButtonMargin defaultAlignment defaultPosition">9</button>
-    <button id="MinusButton" class="defaultSize defaultFont minusButtonMargin defaultAlignment defaultPosition">-</button>
-    <button id="PlusButton" class="defaultSize defaultFont plusButtonMargin defaultAlignment defaultPosition">+</button>
-    <button id="DivisionButton" class="defaultSize defaultFont divisionButtonMargin defaultAlignment defaultPosition">/</button>
-    <button id="MultiplicationButton" class="defaultSize defaultFont multiplicationButtonMargin defaultAlignment defaultPosition">*</button>
-    <button id="ClearButton" class="defaultSize signChangeFont clearButtonMargin defaultAlignment defaultPosition">CE</button>
-    <button id="ClearAllButton" class="defaultSize signChangeFont clearAllButtonMargin defaultAlignment defaultPosition">C</button>
-    <button id="EqualButton" class="defaultSize defaultFont equalButtonMargin defaultAlignment defaultPosition">=</button>
-    <script src="mainWindow.js"></script>
-    <script src="Element.js"></script>
-    <script src="NumberBuilder.js"></script>
-    <script src="CalculatorModel.js"></script>
+    <div id="map">
+      <div id="mapLinkArea">
+        <input type="text" id="mapLink" placeholder="https://www.openstreetmap.org/#map=10/0/0">
+        <button id="mapLinkButton" type="button">Change Map</button>
+      </div>
+      <div id="mapid"></div>
+      <div id="legend">
+        légende
+      </div>
+    </div>
+    <div id="options">
+      grandiose
+    </div>
+    <div id="map-context-menu" class="context-menu">
+      <div id="create-marker" class="item">
+        <i></i> Create Stop
+      </div>
+    </div>
+    <div id="marker-context-menu" class="context-menu">
+      <div id="create-line" class="item">
+        <i></i> Create Line To
+      </div>
+      <div id="edit-marker" class="item">
+        <i></i> Edit Stop
+      </div>
+      <div id="rename-marker" class="item">
+        <i></i> Rename Stop
+      </div>
+      <div id="remove-marker" class="item">
+        <i></i> Remove Stop
+      </div>
+    </div>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
+    <script src="map.js"></script>
   </body>
 </html>

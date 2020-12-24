@@ -23,6 +23,10 @@
   },
   "homepage": "https://github.com/Demomaker/SimpleCalculator2#readme",
   "devDependencies": {
-    "electron": "^8.5.2"
+    "electron": "^8.5.5"
+  },
+  "dependencies": {
+    "bootstrap": "^3.4.1",
+    "jquery": "^3.5.1"
   }
 }

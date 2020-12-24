@@ -1,132 +1,75 @@
-.defaultSize {
-    width: 80px;
-    height: 80px;
+#mapid { width:1000px; height:500px; }
+#mapLinkButton { float:right; width:200px; height:50px;}
+#mapLinkArea {width:1000px; height:50px;}
+#mapLink {float:left; width:800px; height:50px;}
+#map {float:left; width:1000px; height:550px;}
+#options {float:left; width:274px; height:671px; background-color: grey;}
+#legend {float:left; width:1000px; height:120px; background-color: beige;}
+
+#marker-context-menu {
+    position:fixed;
+    z-index:10000;
+    width:150px;
+    background:#1b1a1a;
+    transform:scale(0);
+    transform-origin:top left;
 }
 
-.resultSize {
-    width: 422px;
-    height: 96px;
+#map-context-menu {
+    position:fixed;
+    z-index:10000;
+    width:150px;
+    background:#1b1a1a;
+    transform:scale(0);
+    transform-origin:top left;
 }
 
-.resultBorder {
-    border-style: solid;
-    border-width: 2px;
-    border-color: black;
+#map-context-menu.active {
+    transform:scale(1);
+    transition:transform 200ms ease-in-out;
 }
 
-.resultOverflow {
-    overflow: hidden;
+#marker-context-menu.active {
+    transform:scale(1);
+    transition:transform 200ms ease-in-out;
 }
 
-.defaultPosition {
-    position:absolute;
+#map-context-menu .item {
+    padding:8px 10px;
+    font-size:15px;
+    color:#eee;
 }
 
-.defaultFont {
-    font-size:56px;
+#marker-context-menu .item {
+    padding:8px 10px;
+    font-size:15px;
+    color:#eee;
 }
 
-.signChangeFont {
-    font-size:48px;
+#map-context-menu .item:hover {
+    background:#555;
 }
 
-.resultFont {
-    font-size:72px;
+#marker-context-menu .item:hover {
+    background:#555;
 }
 
-.defaultAlignment {
-    float: left;
-    text-align: center;
-    vertical-align: center;
+#map-context-menu .item i {
+    display:inline-block;
+    margin-right:5px;
 }
 
-.resultAlignment {
-    float: right;
-    text-align: right;
-    vertical-align: center;
+#marker-context-menu .item i {
+    display:inline-block;
+    margin-right:5px;
 }
 
-.resultBackgroundColor {
-    background-color: #FFDEF1FF;
+#map-context-menu hr {
+    margin:2px 0px;
+    border-color:#555;
 }
 
-.resultMargin {
-    margin: 10px 0px 0px 10px;
+#marker-context-menu hr {
+    margin:2px 0px;
+    border-color:#555;
 }
-
-.signChangeButtonMargin {
-    margin: 493px 0px 0px 12px;
-}
-
-.decimalButtonMargin {
-    margin: 493px 0px 0px 192px;
-}
-
-.zeroButtonMargin {
-    margin: 493px 0px 0px 102px;
-}
-
-.oneButtonMargin {
-    margin: 404px 0px 0px 12px;
-}
-
-.twoButtonMargin {
-    margin: 404px 0px 0px 102px;
-}
-
-.threeButtonMargin {
-    margin: 404px 0px 0px 192px;
-}
-
-.fourButtonMargin {
-    margin: 314px 0px 0px 12px;
-}
-
-.fiveButtonMargin {
-    margin: 314px 0px 0px 102px;
-}
-
-.sixButtonMargin {
-    margin: 314px 0px 0px 192px;
-}
-
-.sevenButtonMargin {
-    margin: 224px 0px 0px 12px;
-}
-
-.eightButtonMargin {
-    margin: 224px 0px 0px 102px;
-}
-
-.nineButtonMargin {
-    margin: 224px 0px 0px 192px;
-}
-
-.minusButtonMargin {
-    margin: 493px 0px 0px 352px;
-}
-
-.plusButtonMargin {
-    margin: 404px 0px 0px 352px;
-}
-
-.divisionButtonMargin {
-    margin: 314px 0px 0px 352px;
-}
-
-.multiplicationButtonMargin {
-    margin: 224px 0px 0px 352px;
-}
-
-.clearButtonMargin {
-    margin: 125px 0px 0px 12px;
-}
-
-.clearAllButtonMargin {
-    margin: 125px 0px 0px 102px;
-}
-
-.equalButtonMargin {
-    margin: 125px 0px 0px 352px;
-}
-
