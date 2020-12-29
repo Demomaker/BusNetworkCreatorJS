@@ -11,6 +11,7 @@ var mousePosY = 0;
 var markers = [];
 var newMarkerName = "";
 var ipc = electron.ipcRenderer;
+var otherMarkerIndex = 0;
 
 function createMarker(coords) {
     myMarker = L.marker(coords, {
@@ -21,7 +22,7 @@ function createMarker(coords) {
         contextElement.style.top = mousePosY + "px";
         contextElement.style.left = mousePosX + "px";
         contextElement.classList.add("active");
-        lastMarker = myMarker;
+        lastMarker = this;
     });
     window.addEventListener("click", function () {
         document.getElementById("marker-context-menu").classList.remove("active");
@@ -42,7 +43,6 @@ function removeCurrentMarker() {
 
 function renameMarker(name) {
     newMarkerName = name;
-    console.log("new name : " + name);
 }
 
 function createEditMarkerWindow() {
@@ -54,7 +54,6 @@ function onEditMarkerWindowClose() {
     editingMarker.bindPopup(newMarkerName, {
         closeButton: true
     });
-    console.log("New Marker Name : " + newMarkerName);
 }
 
 function editMarker() {
@@ -62,7 +61,19 @@ function editMarker() {
     createEditMarkerWindow();
 }
 
-function createLine() {}
+function createLineWindow() {
+    electron.ipcRenderer.send('create-line-window');
+}
+
+function createLine() {
+    createLineWindow();
+}
+
+function createLineAfterWindow() {
+    var latlngs = [lastMarker.getLatLng(),markers[otherMarkerIndex].getLatLng()];
+    var polyline = L.polyline(latlngs, {color: 'blue'});
+    polyline.addTo(mymap);
+}
 
 function createMapAt(posX, posY, posZ) {
     if (mymap != undefined) {
@@ -90,12 +101,9 @@ function createMapAt(posX, posY, posZ) {
     });
 
 }
-/*
-var marker = L.marker([51.5,-0.09]).addTo(mymap);
-marker.bindPopup("<b>Hello world!</b><br>I am a popup.").openPopup();*/
 function setMapLink() {
     var mapLink = document.getElementById('mapLink').value;
-    var mapLinkParts = mapLink.split('=')[1];
+    var mapLinkParts = mapLink.split('#map=')[1];
     var mapZ = mapLinkParts.split('/')[0];
     var mapX = mapLinkParts.split('/')[1];
     var mapY = mapLinkParts.split('/')[2];
@@ -117,8 +125,21 @@ function AssignButtonClicks() {
         renameMarker(args);
     })
     ipc.on("edit-window-close", function() {
-        console.log("Yeah, now it's closing time");
         onEditMarkerWindowClose();
+    })
+    ipc.on("get-markers", function(){
+        var markerNames = [];
+        for(i = 0; i < markers.length; i++) {
+            if(markers[i].getPopup() != undefined)
+            markerNames.push(markers[i].getPopup().getContent());
+        }
+        ipc.send("got-markers", markerNames);
+    })
+    ipc.on("save-marker-index", (event, args) => {
+        otherMarkerIndex = Number(args);
+    })
+    ipc.on("create-line-close", function() {
+        createLineAfterWindow();
     })
 }
 

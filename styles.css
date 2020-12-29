@@ -73,3 +73,8 @@
     margin:2px 0px;
     border-color:#555;
 }
+
+#markers {
+    width:100px;
+    height:100px;
+}
