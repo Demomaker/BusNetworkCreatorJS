@@ -2,6 +2,11 @@
 # BusNetworkCreator
 
 Bus Network Creator made using ElectronJS.
+
+## This project has been cancelled
+
+I found out about a project called QGIS that makes it possible to do this and more : https://github.com/qgis/QGIS
+
 WIP (Work In Progress)
 Look so far :
 ![image](https://user-images.githubusercontent.com/18319764/103049996-2a5fd580-4561-11eb-8b3b-81957911b260.png)
